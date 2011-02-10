@@ -29,8 +29,14 @@
 <body>
 
   <div id="container">
-
+<?php include('./inc/html/header.html'); ?>
   Welcome to Wassup! Search <sup>tm</sup>
+
+  <form name="form_query" method="get" action="/search.php">
+    <label for="query" id="searchLabel">Search:</label>
+    <input size="20" maxlength="50" name="query" id="query" value="" type="text">
+    <input type="submit">
+  </form>
 
   </div><!-- container -->
 

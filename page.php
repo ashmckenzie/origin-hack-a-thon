@@ -27,12 +27,12 @@
   <!-- JavaScript : Include and embedded version -->
   <script src="/js/jquery-1.5.min.js" type="text/javascript"></script>
   <script src="/js/register.hit.js" type="text/javascript"></script>
-
   </head>
 
 <body>
 
   <div id="container">
+    <?php include('./inc/html/header.html'); ?>
     <div id="content">
       Welcome to Wassup!
     </div>

@@ -1,8 +1,8 @@
 <?php
 
-require_once './lib/CustomMongo.php';
+require_once dirname(__FILE__) . '/../lib/CustomMongo.php';
 
-class RegisterSearchTerm extends CustomMongo {
+class SearchTerm extends CustomMongo {
 
 	var $collection = 'search_terms';
 
