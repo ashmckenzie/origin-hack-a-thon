@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  <title>Wassup</title>
+  <title>Wassup!</title>
 
   <!-- Meta Tags -->
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -22,12 +22,13 @@
 <body>
 
   <div id="container">
-  <h1>Welcome to WASSUP!</h1>
-  <ul>
-    <li><a href='/url/phony.php'>Phony Page Request</a></li>
-    <li><a href='/search.php'>Phony Search Page</a></li>
-    <li><a href='/phpinfo.php'>phpinfo()</a></li>
-  </ul>
+    <?php include('./inc/html/header.html'); ?>
+    <div id="content">
+      Welcome to Wassup! <sup>tm</sup>
+    </div>
+    <div id="debug">
+
+    </div>
   </div><!-- container -->
 
 </body>

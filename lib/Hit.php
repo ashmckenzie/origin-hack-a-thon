@@ -1,6 +1,7 @@
 <?php
 
 require_once dirname(__FILE__) . '/../lib/CustomMongo.php';
+require_once dirname(__FILE__) . '/../lib/Session.php';
 
 class Hit extends CustomMongo {
 

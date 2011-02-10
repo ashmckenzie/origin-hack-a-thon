@@ -1,10 +1,3 @@
-<?php
-
-
-?>
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,16 +21,22 @@
 
 <body>
 
+
   <div id="container">
-<?php include('./inc/html/header.html'); ?>
-  Welcome to Wassup! Search <sup>tm</sup>
+    <?php include('./inc/html/header.html'); ?>
+    <div id="content">
+      Wassup!<sup>tm</sup> - Search Register
+      <br />
+      <form name="form_query" method="get" action="/search.php">
+        <label for="query" id="searchLabel">Search:</label>
+        <input size="20" maxlength="50" name="query" id="query" value="" type="text">
+        <input type="submit" value="Wassup?">
+      </form>
 
-  <form name="form_query" method="get" action="/search.php">
-    <label for="query" id="searchLabel">Search:</label>
-    <input size="20" maxlength="50" name="query" id="query" value="" type="text">
-    <input type="submit">
-  </form>
+    </div>
+    <div id="debug">
 
+    </div>
   </div><!-- container -->
 
 </body>

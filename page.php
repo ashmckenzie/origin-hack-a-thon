@@ -1,14 +1,4 @@
-<?php
-
-
-?>
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -27,6 +17,7 @@
   <!-- JavaScript : Include and embedded version -->
   <script src="/js/jquery-1.5.min.js" type="text/javascript"></script>
   <script src="/js/register.hit.js" type="text/javascript"></script>
+
   </head>
 
 <body>
@@ -34,7 +25,7 @@
   <div id="container">
     <?php include('./inc/html/header.html'); ?>
     <div id="content">
-      Welcome to Wassup!
+      Wassup!<sup>tm</sup> - Page Hit Register
     </div>
     <div id="debug">
 
@@ -42,4 +33,3 @@
   </div><!-- container -->
 
 </body>
-</html>

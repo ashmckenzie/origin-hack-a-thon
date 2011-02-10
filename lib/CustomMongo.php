@@ -20,6 +20,9 @@ class CustomMongo {
 		}
 		$collection = $this->collection;
 		$c = $this->db->$collection;
+
+		$data['created_at'] = time();
+
 		return $c->insert($data, $args);
 	}
 
