@@ -27,10 +27,10 @@
 
 		<?php include('./inc/php/header.php'); ?>
 		<div id="content">
-
-			<h3>Wassup!<sup>tm</sup> - Dashboard</h3>
-			<br />
-
+      <div id="site_title" style="margin-bottom: 20px;">
+			<h2>Wassup!<sup>tm</sup></h2>
+			<b><i>The Elite Origin Energy Web Stats Dashboard</i></b>
+      </div>
 			<div id="left">
 
 				<div id="users" class="panel">
