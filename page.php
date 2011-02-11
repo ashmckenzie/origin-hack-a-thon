@@ -23,16 +23,16 @@
 <body>
 
   <div id="container">
-    <?php include('./inc/html/header.html'); ?>
+    <?php include('./inc/php/header.php'); ?>
     <div id="content">
       Wassup!<sup>tm</sup> - Page Hit Register
     </div>
     <div id="debug">
 
-			<?php
-				require_once dirname(__FILE__) . '/lib/krumo/class.krumo.php';
-				krumo($_SERVER);
-			?>
+      <?php
+        require_once dirname(__FILE__) . '/lib/krumo/class.krumo.php';
+        krumo($_SERVER);
+      ?>
 
     </div>
   </div><!-- container -->

@@ -9,7 +9,7 @@ require_once dirname(__FILE__) . '/../lib/Hit.php';
 
 $data = array(
 	'url' => $_POST['url'],
-	'referer' => $_SERVER['HTTP_REFERER']
+	'referrer' => $_POST['referrer']
 );
 
 $h = new Hit;

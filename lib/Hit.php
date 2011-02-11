@@ -14,7 +14,12 @@ class Hit extends CustomMongo {
 	function register_hit($session_id, $data) {
 		$session = $this->_get_session($session_id);
 		$data['session_id'] = $session['_id'];
-		$this->insert($data);
+
+		if (! is_null($data['url'])) {
+			return $this->insert($data);
+		} else {
+			return false;
+		}
 	}
 
 	private function _get_session($session_id) {

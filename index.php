@@ -22,7 +22,7 @@
 <body>
 
   <div id="container">
-    <?php include('./inc/html/header.html'); ?>
+    <?php include('./inc/php/header.php'); ?>
     <div id="content">
       Welcome to Wassup! <sup>tm</sup>
     </div>
