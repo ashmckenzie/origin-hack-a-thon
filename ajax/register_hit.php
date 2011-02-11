@@ -5,7 +5,7 @@
 require_once dirname(__FILE__) . '/../lib/krumo/class.krumo.php';
 require_once dirname(__FILE__) . '/../lib/Hit.php';
 
-//print_r($_SERVER);
+print_r($_SERVER);
 
 $data = array(
 	'url' => $_POST['url'],

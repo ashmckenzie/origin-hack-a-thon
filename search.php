@@ -16,7 +16,7 @@
 
   <!-- JavaScript : Include and embedded version -->
   <script src="/js/jquery-1.5.min.js" type="text/javascript"></script>
-
+  <script src="/js/register.search.js" type="text/javascript"></script>
   </head>
 
 <body>
@@ -25,14 +25,21 @@
   <div id="container">
     <?php include('./inc/php/header.php'); ?>
     <div id="content">
-      Wassup!<sup>tm</sup> - Search Register
+      <h3>Wassup!<sup>tm</sup> - Search Register</h3>
       <br />
-      <form name="form_query" method="get" action="/search.php">
+      <form id="form_query" name="form_query" method="POST" action="/search.php" >
         <label for="query" id="searchLabel">Search:</label>
         <input size="20" maxlength="50" name="query" id="query" value="" type="text">
-        <input type="submit" value="Wassup?">
+        <input type="submit" value="Wassup?" id="search_submit">
       </form>
+<?php
 
+  if(isset($_REQUEST['query']))
+  {
+    print("<p>Sorry, I don't know anything about <b>" . $_REQUEST['query'] . "</b>.<br />In fact, I don't know much of anything. Haven't you heard of Google?</p>");
+  }
+
+?>
     </div>
     <div id="debug">
 

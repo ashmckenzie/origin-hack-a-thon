@@ -25,7 +25,7 @@
   <div id="container">
     <?php include('./inc/php/header.php'); ?>
     <div id="content">
-      Wassup!<sup>tm</sup> - Page Hit Register
+      <h3>Wassup!<sup>tm</sup> - Page Hit Register</h3>
     </div>
     <div id="debug">
 

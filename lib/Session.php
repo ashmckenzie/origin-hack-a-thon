@@ -12,11 +12,19 @@ class Session extends CustomMongo {
 
 	function register_session($session_id, &$data) {
 		$data = array(
-			'session_id' => $session_id
+			'session_id' => $session_id,
+			'browser' => $this->get_browser()
 		);
 
 		$this->insert($data);
 
 		return $this->find_one($data);
+	}
+
+	function $this->get_browser() {
+		return '';
+	}
+
+	function $this->get_name() {
 	}
 }

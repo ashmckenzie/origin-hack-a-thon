@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  <title>Wassup!</title>
+  <title>Wassup! Search Form</title>
 
   <!-- Meta Tags -->
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -10,6 +10,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/application.css" media="screen,projection" type="text/css" />
+  <link rel="stylesheet" href="/css/dashboard.css" media="screen,projection" type="text/css" />
 
   <!-- RSS -->
   <!-- <link rel="alternate" href="" title="RSS Feed" type="application/rss+xml" /> -->
@@ -21,11 +22,21 @@
 
 <body>
 
+
   <div id="container">
     <?php include('./inc/php/header.php'); ?>
     <div id="content">
-      <h3>Welcome to Wassup! <sup>tm</sup></h3>
+      Wassup!<sup>tm</sup> - Dashboard
+      <br />
+
+			<div id="users">
+				<?php
+					require_once dirname(__FILE__) . '/inc/php/dashboard_users.php';
+				?>
+			</div>
+
     </div>
+
     <div id="debug">
 
     </div>

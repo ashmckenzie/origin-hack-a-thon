@@ -15,10 +15,10 @@ $(document).ready(function () {
       data: ({url : document_url, referrer : document_referrer}),
       dataType: "json",
       success: function(msg) {
-	  	// alert(msg.url + '\n' + msg.referrer);
+	  		console.log('SUCCESS: ' + msg.url + '\n' + msg.referrer);
       },
   	  error: function(msg) {
-  	    alert('OHNOES!\n...failcats');
+  	    console.log('ERROR: ' + msg.responseText);
   	  }
     });
 });
