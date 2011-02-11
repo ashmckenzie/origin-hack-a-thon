@@ -1,3 +1,27 @@
 #users {
-	width: 400px;
+	width: 500px;
+}
+
+#users div.browser {
+	background-image: url('/images/browser_logos-32.png');
+	float: left;
+	height: 33px;
+	margin-top: 1px;
+	width: 35px;
+}
+
+#users div.firefox {
+	background-position: 135px 0;
+}
+
+#users div.ie {
+	background-position: 32px 0;
+}
+
+#users div.chrome {
+	background-position: 171px 0;
+}
+
+#users table tbody td {
+	padding: 4px;	
 }

@@ -17,6 +17,7 @@
 
   <!-- JavaScript : Include and embedded version -->
   <script src="/js/jquery-1.5.min.js" type="text/javascript"></script>
+  <script src="/js/dashboard.js" type="text/javascript"></script>
 
   </head>
 
@@ -35,7 +36,7 @@
         ?>
       </div>
 
-      <div id="search_stats">
+      <div id="search_terms">
         <?php
           require_once dirname(__FILE__) . '/inc/php/dashboard_search.php';
         ?>

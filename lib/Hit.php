@@ -17,6 +17,8 @@ class Hit extends CustomMongo {
 		$data['session_id'] = $session['_id'];
 
 		if (! is_null($data['url'])) {
+			$s = new Session;
+			$s->update_session($session['session_id'], array('hits' => $session['hits'] + 1));
 			return $this->insert($data);
 		} else {
 			return false;
@@ -30,8 +32,6 @@ class Hit extends CustomMongo {
 		if (! ($session = $s->find_one(array('session_id' => $session_id)))) {
 			$session = $s->register_session($session_id, $data);
 		}
-
-		$s->update_session($session['session_id'], array());
 
 		return $session;
 	}
