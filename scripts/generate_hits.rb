@@ -13,6 +13,8 @@ class Url
 end
 
 urls = Url.all()
-path = urls[rand(urls.size)].path
 
-Curl::Easy.perform("http://192.168.4.110/url/#{path}")
+50.times do |x|
+	path = urls[rand(urls.size)].path
+	Curl::Easy.perform("http://192.168.4.110/url2/#{path}")
+end

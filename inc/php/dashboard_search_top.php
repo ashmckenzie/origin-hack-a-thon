@@ -20,14 +20,19 @@ $conditions = array(
 // grouping...
 $keys = array("query" => 1);
 $initial = array("queries" => array());
-$reduce = "function (obj, prev) { prev.queries.push(obj.name); }";
+$reduce = "function (obj, prev) { prev.queries.push(obj.query); }";
+
+$groupConfig = array(
+  'keys' => $keys,
+  'initial' => $initial,
+  'reduce' => $reduce
+);
+
 
 $st = new SearchTerm;
-
-$search_terms = $st->group($keys, $initial, $reduce)
-                  ->find($conditions)
-              ->sort(array('created_at' => -1))
-              ->limit(QUERY_LIMIT);
+$search_terms = $st->findGrouped($groupConfig, $conditions)
+                  ->sort(array('created_at' => -1))
+                  ->limit(QUERY_LIMIT);
 
 
 print("<table id='dashboard_table_search_top'>");

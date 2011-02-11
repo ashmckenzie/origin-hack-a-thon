@@ -6,3 +6,21 @@
 	padding: 10px;
 	-moz-border-radius: 6px;
 }
+
+#left {
+	width: 580px;
+}
+
+#right {
+	width: 400px;
+}
+
+#left,
+#left div.panel {
+	float: left;
+}
+
+#right,
+#right div.panel {
+	float: right;
+}

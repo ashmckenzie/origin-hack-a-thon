@@ -1,3 +1,4 @@
 # Options +FollowSymlinks
 RewriteEngine on
 RewriteRule ^url/(.*) page.php [NC]
+RewriteRule ^url2/(.*) page2.php [NC]

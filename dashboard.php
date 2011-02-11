@@ -27,29 +27,39 @@
 
 		<?php include('./inc/php/header.php'); ?>
 		<div id="content">
+
 			<h3>Wassup!<sup>tm</sup> - Dashboard</h3>
 			<br />
 
-			<div id="users" class="panel">
-				<?php
-					require_once dirname(__FILE__) . '/inc/php/dashboard_users.php';
-				?>
+			<div id="left">
+
+				<div id="users" class="panel">
+					<?php
+						require_once dirname(__FILE__) . '/inc/php/dashboard_users.php';
+					?>
+				</div>
+
 			</div>
 
-			<div id="search_terms_recent" class="panel">
-				<?php
-					require_once dirname(__FILE__) . '/inc/php/dashboard_search_recent.php';
-				?>
-			</div>
+			<div id="right">
 
+				<div id="search_terms_recent" class="panel">
+					<?php
+						require_once dirname(__FILE__) . '/inc/php/dashboard_search_recent.php';
+					?>
+				</div>
 
-			<div id="search_terms_top" class="panel">
-				<?php
-					require_once dirname(__FILE__) . '/inc/php/dashboard_search_top.php';
-				?>
+				<div id="search_terms_top" class="panel">
+					<?php
+						require_once dirname(__FILE__) . '/inc/php/dashboard_search_top.php';
+					?>
+				</div>
+
 			</div>
 
 		</div>
+
+		<div class="clearfix"></div>
 
 		<div id="debug">
 
