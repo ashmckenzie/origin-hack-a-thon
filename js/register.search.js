@@ -10,7 +10,6 @@ $('#form_query').one('submit', function () {
     data: ({query : search_query}),
     dataType: "json",
     success: function(msg) {
-      //console.log(msg.query);
 			$('#form_query').submit();
     },
   	error: function(msg) {
