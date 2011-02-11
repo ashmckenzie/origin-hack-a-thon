@@ -1,9 +1,11 @@
 <?php
 
 require_once dirname(__FILE__) . '/../lib/CustomMongo.php';
+require_once dirname(__FILE__) . '/../lib/FakeUser.php';
 
 class Session extends CustomMongo {
 
+	var $db = 'hack';
 	var $collection = 'sessions';
 
 	function __construct() {
@@ -13,7 +15,8 @@ class Session extends CustomMongo {
 	function register_session($session_id, &$data) {
 		$data = array(
 			'session_id' => $session_id,
-			'browser' => $this->get_browser()
+			'browser' => $this->get_browser(),
+			'name' => $this->get_name()
 		);
 
 		$this->insert($data);
@@ -21,10 +24,16 @@ class Session extends CustomMongo {
 		return $this->find_one($data);
 	}
 
-	function $this->get_browser() {
+	function update_session($session_id, $data = array()) {
+		return $this->update(array('session_id' => $session_id), $data);	
+	}
+
+	function get_browser() {
 		return '';
 	}
 
-	function $this->get_name() {
+	function get_name() {
+		$fu = new FakeUser;
+		return $fu->get_random_name();
 	}
 }

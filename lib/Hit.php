@@ -5,6 +5,7 @@ require_once dirname(__FILE__) . '/../lib/Session.php';
 
 class Hit extends CustomMongo {
 
+	var $db = 'hack';
 	var $collection = 'hits';
 
 	function __construct() {
@@ -29,6 +30,8 @@ class Hit extends CustomMongo {
 		if (! ($session = $s->find_one(array('session_id' => $session_id)))) {
 			$session = $s->register_session($session_id, $data);
 		}
+
+		$s->update_session($session['session_id'], array());
 
 		return $session;
 	}

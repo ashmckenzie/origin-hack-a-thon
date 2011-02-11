@@ -16,7 +16,7 @@
 
   <!-- JavaScript : Include and embedded version -->
   <script src="/js/jquery-1.5.min.js" type="text/javascript"></script>
-  <script src="/js/register.search.js" type="text/javascript"></script>
+
   </head>
 
 <body>
@@ -45,6 +45,6 @@
 
     </div>
   </div><!-- container -->
-
+<script src="/js/register.search.js" type="text/javascript"></script>
 </body>
 </html>

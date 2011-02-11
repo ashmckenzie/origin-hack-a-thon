@@ -1,13 +1,13 @@
 <?php
 
 require_once dirname(__FILE__) . '/../../lib/krumo/class.krumo.php';
-require_once dirname(__FILE__) . '/../../lib/Hit.php';
+require_once dirname(__FILE__) . '/../../lib/Session.php';
 
-$h = new Hit;
-$hits = $h->find()->sort(array('created_at' => -1));
+$s = new Session;
+$sessions = $s->find()->sort(array('updated_at' => -1));
 
-foreach ($hits as $hit) {
-  print $hit['url'] . "<br/>";
+foreach ($sessions as $session) {
+	krumo($session);
 }
 
 ?>

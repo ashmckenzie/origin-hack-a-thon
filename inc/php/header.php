@@ -40,5 +40,5 @@ $page_name = randomString(8,'alphalower');
 ?>
 
 <div id="header">
-<a href="/">Home</a> | <a href="/search.php">Search</a> | <a href="/show_hits.php">Show Hits</a> | <a href="/url/<?php echo $page_name; ?>.php">Phony Page Hit (randomised)</a>
+<a href="/">Home</a> | <a href="/search.php">Search</a> | <a href="/dashboard.php">Dashboard</a> | <a href="/url/<?php echo $page_name; ?>.php">Phony Page Hit (randomised)</a>
 </div>
