@@ -27,7 +27,10 @@ $sessions = $s->find($conditions)
 
 $now = strftime('%d/%m/%YTY %H:%M:%S');
 
-print "<table>
+print "
+<h3>Active users</h3>
+
+<table>
 <thead>
 	<tr>
 		<th></th>

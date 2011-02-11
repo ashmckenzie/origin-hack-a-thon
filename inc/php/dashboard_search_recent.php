@@ -1,6 +1,4 @@
-<hr>
 <h3>Recent Search Terms</h3>
-<br />
 <?php
 
 require_once dirname(__FILE__) . '/../../lib/krumo/class.krumo.php';
@@ -22,17 +20,15 @@ $search_terms = $st->find($conditions)
               ->limit(QUERY_LIMIT);
 
 
-print("<table id='dashboard_table_search_recent'>");
+print "<ol>";
 
 $i = 0;
+
 foreach ($search_terms as $search_term) {
   $i++;
-	print("<tr><td>$i) " . $search_term['query'] . "</td></tr>");
+	print "<li>" . $search_term['query'] . "</li>";
 }
-print("</table>");
 
+print "</ol>";
 
 ?>
-
-
-

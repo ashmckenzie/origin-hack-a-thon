@@ -1,8 +1,9 @@
-#search_terms_recent {
-	width: 300px;
+#search_terms_recent,
+#search_terms_top {
+	width: 280px;
 }
 
-#dashboard_table_search {
-	width: 500px;
-	border: 1px;
+#search_terms_top ol li,
+#search_terms_recent ol li {
+	line-height: 24px;
 }

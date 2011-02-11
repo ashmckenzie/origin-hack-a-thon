@@ -32,25 +32,26 @@ $groupConfig = array(
 $st = new SearchTerm;
 $search_terms = $st->findGrouped($groupConfig, $conditions);
 
-krumo($search_terms);
-
 $grouped_results = array();
 foreach($search_terms as $search_term)
 {
-  $grouped_results[] = array('query' => $search_term['query'], 'count' => count($search_term['queries']));
+  krumo($search_term);
+
+  // $grouped_results["$search_term['query']"] = count($search_term['queries']);
 }
+exit();
 
-arsort($grouped_results);
 krumo ($grouped_results);
-
+asort($grouped_results, SORT_NUMERIC);
+krumo ($grouped_results);
 
 
 print("<table id='dashboard_table_search_top'>");
 
 $i = 0;
-foreach ($search_terms as $search_term) {
+foreach ($grouped_results as $query => $count) {
   $i++;
-	print("<tr><td>$i) " . $search_term['query'] . "</td></tr>");
+	print("<tr><td>$i) " . $query . " (" . $count . ")</td></tr>");
 }
 print("</table>");
 
