@@ -29,6 +29,11 @@
     </div>
     <div id="debug">
 
+			<?php
+				require_once dirname(__FILE__) . '/lib/krumo/class.krumo.php';
+				krumo($_SERVER);
+			?>
+
     </div>
   </div><!-- container -->
 

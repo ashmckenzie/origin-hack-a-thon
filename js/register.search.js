@@ -1,15 +1,14 @@
 
 
-
 $(document).ready(function () {
   
-  var register_url = "/ajax/register_hit.php";
-  var document_url = window.location.pathname;
+  var register_url = "/ajax/ajax_test.php.php";
+  var search_query = window.location.hostname;
   
   $.ajax({
       url: register_url,
       type: "POST",
-      data: ({url : document_url}),
+      data: ({query : search_query}),
       dataType: "json",
       success: function(msg) {
 	  	alert(msg.url);

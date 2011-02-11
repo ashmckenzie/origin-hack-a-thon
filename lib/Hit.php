@@ -21,10 +21,10 @@ class Hit extends CustomMongo {
 
 		$s = new Session;
 
-		if (! ($x = $s->find_one(array('session_id' => $session_id)))) {
-			$x = $s->register_session($session_id, $data);
+		if (! ($session = $s->find_one(array('session_id' => $session_id)))) {
+			$session = $s->register_session($session_id, $data);
 		}
 
-		return $x;
+		return $session;
 	}
 }
