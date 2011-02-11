@@ -13,9 +13,14 @@ class Session extends CustomMongo {
 	}
 
 	function register_session($session_id, &$data) {
+
+		$browser = get_browser(null, true);
+
 		$data = array(
 			'session_id' => $session_id,
-			'browser' => $this->get_browser(),
+			'platform' => $browser['platform'],
+			'browser_type' => $browser['browser'],
+			'browser_version' => $browser['version'],
 			'name' => $this->get_name()
 		);
 
@@ -26,10 +31,6 @@ class Session extends CustomMongo {
 
 	function update_session($session_id, $data = array()) {
 		return $this->update(array('session_id' => $session_id), $data);	
-	}
-
-	function get_browser() {
-		return '';
 	}
 
 	function get_name() {

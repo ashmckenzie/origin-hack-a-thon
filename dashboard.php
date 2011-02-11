@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  <title>Wassup! Search Form</title>
+  <title>Wassup! Dashboard</title>
 
   <!-- Meta Tags -->
   <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
@@ -26,14 +26,20 @@
   <div id="container">
     <?php include('./inc/php/header.php'); ?>
     <div id="content">
-      Wassup!<sup>tm</sup> - Dashboard
+      <h3>Wassup!<sup>tm</sup> - Dashboard</h3>
       <br />
 
-			<div id="users">
-				<?php
-					require_once dirname(__FILE__) . '/inc/php/dashboard_users.php';
-				?>
-			</div>
+      <div id="users">
+        <?php
+          require_once dirname(__FILE__) . '/inc/php/dashboard_users.php';
+        ?>
+      </div>
+
+      <div id="search_stats">
+        <?php
+          require_once dirname(__FILE__) . '/inc/php/dashboard_search.php';
+        ?>
+      </div>
 
     </div>
 
