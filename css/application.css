@@ -1,9 +1,26 @@
 body {
-	
+  background-color: #C3C7E2;
 	font-family: sans-serif;
+	margin: 0 auto;
+  width: 1000px;
 }
 
 #header {
-	
+	float: right;
 	margin-bottom: 20px;
 }
+
+.center {
+	text-align: center;
+}
+
+#container {
+  background-color: #fff;
+  border: 2px solid #777;
+  margin: 20px auto;
+	padding: 20px;
+  width: 1000px;
+  -moz-border-radius: 6px;
+  -moz-box-shadow: 0 0 20px #000;
+}
+

@@ -27,8 +27,6 @@ $sessions = $s->find($conditions)
 
 $now = strftime('%d/%m/%YTY %H:%M:%S');
 
-print "<p>Last updated: $now</p>";
-
 print "<table>
 <thead>
 	<tr>
@@ -61,6 +59,8 @@ foreach ($sessions as $session) {
 print "
 </tbody>
 </table>";
+
+print "<p class=\"center\" style=\"font-size: 10px; color: #777;\">Last updated: $now</p>";
 
 function ago($tm, $rcs = 0) {
 	$cur_tm = time(); $dif = $cur_tm-$tm;

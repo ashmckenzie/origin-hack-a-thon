@@ -1,13 +1,14 @@
 <hr>
-<h3>Recent Search Terms</h3>
+<h3>Top Search Terms</h3>
 <br />
 <?php
 
 require_once dirname(__FILE__) . '/../../lib/krumo/class.krumo.php';
 require_once dirname(__FILE__) . '/../../lib/SearchTerm.php';
 
-define('QUERY_MAX_AGE', 180);		// mins
-define('QUERY_LIMIT', 10);
+// TODO rename these
+// define('QUERY_MAX_AGE', 180);    // mins
+// define('QUERY_LIMIT', 10);
 
 $offset = QUERY_MAX_AGE * 60;
 $start = new MongoDate(time() - $offset);
@@ -16,13 +17,20 @@ $conditions = array(
 	'created_at' => array('$gt' => $start)
 );
 
+// grouping...
+$keys = array("query" => 1);
+$initial = array("queries" => array());
+$reduce = "function (obj, prev) { prev.queries.push(obj.name); }";
+
 $st = new SearchTerm;
-$search_terms = $st->find($conditions)
+
+$search_terms = $st->group($keys, $initial, $reduce)
+                  ->find($conditions)
               ->sort(array('created_at' => -1))
               ->limit(QUERY_LIMIT);
 
 
-print("<table id='dashboard_table_search'>");
+print("<table id='dashboard_table_search_top'>");
 
 $i = 0;
 foreach ($search_terms as $search_term) {

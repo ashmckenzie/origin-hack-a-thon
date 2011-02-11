@@ -22,7 +22,7 @@ $search_terms = $st->find($conditions)
               ->limit(QUERY_LIMIT);
 
 
-print("<table id='dashboard_table_search'>");
+print("<table id='dashboard_table_search_recent'>");
 
 $i = 0;
 foreach ($search_terms as $search_term) {
