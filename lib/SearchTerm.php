@@ -25,9 +25,10 @@ class SearchTerm extends CustomMongo {
     $collection = $this->collection;
     $c = $this->db->$collection;
     $g = $c->group($groupConfig['keys'], $groupConfig['initial'], $groupConfig['reduce']);
-    krumo(json_encode($g['retval']));
-    exit();
-    return $c->find($args);
+    // krumo(json_encode($g['retval']));
+    return $g['retval'];
+    // exit();
+    // return $c->find($args);
   }
 
 }

@@ -30,9 +30,19 @@ $groupConfig = array(
 
 
 $st = new SearchTerm;
-$search_terms = $st->findGrouped($groupConfig, $conditions)
-                  ->sort(array('created_at' => -1))
-                  ->limit(QUERY_LIMIT);
+$search_terms = $st->findGrouped($groupConfig, $conditions);
+
+krumo($search_terms);
+
+$grouped_results = array();
+foreach($search_terms as $search_term)
+{
+  $grouped_results[] = array('query' => $search_term['query'], 'count' => count($search_term['queries']));
+}
+
+arsort($grouped_results);
+krumo ($grouped_results);
+
 
 
 print("<table id='dashboard_table_search_top'>");

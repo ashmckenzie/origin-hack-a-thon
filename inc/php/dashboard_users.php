@@ -4,7 +4,7 @@ require_once dirname(__FILE__) . '/../../lib/krumo/class.krumo.php';
 require_once dirname(__FILE__) . '/../../lib/Session.php';
 
 define('DASHBOARD_USER_SESSION_MAX_AGE', 30);		// mins
-define('DASHBOARD_USER_LIMIT', 30);
+define('DASHBOARD_USER_LIMIT', 15);
 
 $offset = DASHBOARD_USER_SESSION_MAX_AGE * 60;
 
@@ -19,8 +19,8 @@ $conditions = array(
 $sessions = $s->find($conditions)
 							->sort(
 									array(
-										'updated_at' => -1,
-										'hits' => -1
+										'hits' => -1,
+										'updated_at' => -1
 									)
 								)
 							->limit(DASHBOARD_USER_LIMIT);
